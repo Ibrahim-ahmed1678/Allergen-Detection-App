@@ -8,28 +8,16 @@ AllergenDetect uses computer vision and natural language processing to scan food
 
 ## Why This Matters
 
-Managing food allergies and dietary restrictions can be challenging:
-- **Multiple ingredient names**: Allergens can appear under various chemical or alternative names
-- **Inconsistent labeling**: Different countries and manufacturers use different labeling standards
-- **Time-consuming**: Reading and interpreting ingredient lists takes time and expertise
-- **Health critical**: Accidental exposure to allergens can have serious health consequences
-
-AllergenDetect simplifies this process by automatically identifying allergens and highlighting specific ingredients of concern.
+Being able to easily identify exactly what allergens or other compounds are in a food is essential for the well-being of people who have allergies, intolerances, and/or dietary restrictions that prevent them from consuming certain substances. Many ingredients can have multiple names, and foods produced in different places may have varying labeling structures; therefore, a tool like this would greatly assist individuals trying to identify if a product contains ingredients they can’t have (e.g., gluten, dairy).
 
 ## MVP Features
 
 ### Core Functionality
-- **Allergen Detection**: Support for 5 common allergens
-  - Peanuts
-  - Tree nuts
-  - Gluten
-  - Dairy
-  - Shellfish
-- **Image Upload**: Upload photos of food labels from your device
-- **Detailed Results**: 
-  - Clear indication of allergen presence/absence
-  - List of specific ingredients that contain the detected allergen
-  - Confidence levels for detection
+Dropdown for a few specific allergens (peanuts, tree nuts, gluten, dairy, shellfish)
+Able to upload images from your camera and have those processed
+Extra: take photos through the web app?
+Once the photo is processed, the output states whether the allergen appears to be present or not present, and if it is, lists the specific ingredients that the model is picking up
+
 
 ### Stretch Goals
 - In-app camera functionality for real-time scanning
@@ -38,127 +26,12 @@ AllergenDetect simplifies this process by automatically identifying allergens an
 
 ## Tech Stack
 
-### Frontend
-- **Framework**: React with TypeScript
-- **Deployment**: Vercel
+###Front-end
+Build with React and TypeScript
+###Backend 
+Uses PyTorch, Keras, or TF model?
+I'm not sure how to connect this to the front end yet. Do I need to deploy it with Docker or Kubernetes?
+Probably going to publish through Vercel
 
-### Backend
-- **ML Framework**: TensorFlow/Keras or PyTorch (TBD)
-- **OCR**: Tesseract.js or Google Cloud Vision API
-- **API**: REST API (Node.js/Express or Python/FastAPI)
-- **Containerization**: Docker (for model deployment)
 
-### Infrastructure Considerations
-- Model hosting options: AWS Lambda, Google Cloud Run, or Kubernetes
-- Database: PostgreSQL or MongoDB (if needed for user data/allergen database)
 
-## Project Timeline
-
-### Week 1: Planning & Proposal
-- [x] Define project scope and MVP features
-- [x] Research tech stack options
-- [ ] Finalize proposal document
-- [ ] Set up project repository and development environment
-
-### Week 2: Foundation
-- [ ] Build initial React frontend framework
-- [ ] Design UI/UX mockups
-- [ ] Research and select OCR/ML models for:
-  - Barcode scanning
-  - Text extraction from images
-  - Ingredient parsing
-- [ ] Set up backend API structure
-
-### Week 3: Core Development
-- [ ] Implement image upload functionality
-- [ ] Integrate OCR for ingredient extraction
-- [ ] Build allergen detection logic
-- [ ] Create allergen database/mapping system
-- [ ] Connect frontend to backend API
-- [ ] Implement results display interface
-
-### Week 4: Testing & Polish
-- [ ] End-to-end testing with real food labels
-- [ ] Bug fixes and error handling
-- [ ] Performance optimization
-- [ ] Documentation and code cleanup
-- [ ] Prepare demo and presentation
-- [ ] Deploy to production environment
-
-## Task Division
-
-### Partner A: Frontend Development
-- React application structure
-- User interface components
-- Image upload and camera integration
-- Results display and user experience
-- Frontend-backend integration
-
-### Partner B: Backend & ML
-- Model selection and training/fine-tuning
-- OCR implementation
-- Allergen detection algorithm
-- API development
-- Database design and implementation
-- Deployment and containerization
-
-*Note: These are flexible guidelines - we'll collaborate on all aspects as needed*
-
-## Getting Started
-
-### Prerequisites
-```bash
-Node.js >= 18.x
-Python >= 3.9 (for backend)
-npm or yarn
-```
-
-### Installation
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/allergen-detect.git
-
-# Install frontend dependencies
-cd frontend
-npm install
-
-# Install backend dependencies
-cd ../backend
-pip install -r requirements.txt
-```
-
-### Development
-```bash
-# Run frontend
-npm run dev
-
-# Run backend (in separate terminal)
-python app.py
-```
-
-## Contributing
-
-This is a course project with limited scope, but we welcome suggestions and feedback!
-
-## Open Questions
-
-- [ ] Best approach for connecting ML model to frontend (serverless vs. container)?
-- [ ] OCR accuracy with various lighting conditions and label formats
-- [ ] How to handle ambiguous ingredient names?
-- [ ] Privacy considerations for image uploads
-
-## License
-
-TBD
-
-## Acknowledgments
-
-- Course instructors and TAs
-- Open-source ML model communities
-- Allergen databases and food safety resources
-
----
-
-**Project Status**: In Development
-
-**Timeline**: 4 weeks (Proposal due Week 1)
