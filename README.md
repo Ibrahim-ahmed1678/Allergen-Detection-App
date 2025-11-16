@@ -26,9 +26,9 @@ Once the photo is processed, the output states whether the allergen appears to b
 
 ## Tech Stack
 
-###Front-end
+### Front-end
 Build with React and TypeScript
-###Backend 
+### Backend 
 Uses PyTorch, Keras, or TF model?
 I'm not sure how to connect this to the front end yet. Do I need to deploy it with Docker or Kubernetes?
 Probably going to publish through Vercel
