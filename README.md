@@ -1,4 +1,4 @@
-# allergendetect
+# AllergenDetect
 
 A web application that helps users identify allergens in food products by scanning barcodes and analyzing ingredient lists.
 
